@@ -1,0 +1,94 @@
+<h1>Bienvenides</h1>
+<h2>¡Esto es Memerch!</h2>
+
+<h4>Listar productos existentes</h4>
+<form action="/list-products" method="post">
+  <button type="submit">Listar productos</button>
+</form>
+
+<br>
+
+<h4>Listar productos por búsqueda (nombre o color)</h4>
+<form action="/multi-field-search-product" method="post">
+  <label for="productName">Nombre del producto:</label>
+  <input type="text" name="productName">
+  <label for="productColor">Color del producto:</label>
+  <input type="text" name="productColor">
+  <button type="submit">¡Encuéntralo!</button>
+</form>
+
+<br>
+
+<h4>Listar productos por búsqueda (general)</h4>
+<form action="/universal-search-product" method="post">
+  <label for="value">Búsqueda:</label>
+  <input type="text" name="value">
+  <button type="submit">¡Encuéntralo!</button>
+</form>
+
+<br>
+
+<h4>Añadir nuevo producto</h4>
+<form action="/new-product" method="post">
+  <input type="text" name="productName" placeholder="Taza">
+  <input type="text" name="productColor" placeholder="Rojo">
+  <button type="submit">Añadir</button>
+</form>
+
+<br>
+
+<h4>Listar clientes por búsqueda (nombre o apellido)</h4>
+<form action="/multi-field-search-client" method="post">
+  <label for="name">Nombre:</label>
+  <input type="text" name="name">
+  <label for="surname">Apellido:</label>
+  <input type="text" name="surname">
+  <button type="submit">¡Encuéntralo!</button>
+</form>
+
+<br>
+
+<h4>Listar clientes por búsqueda (general)</h4>
+<form action="/universal-search-client" method="post">
+  <label for="value">Búsqueda:</label>
+  <input type="text" name="value">
+  <button type="submit">¡Encuéntralo!</button>
+</form>
+
+<br>
+
+<h4>Registrar nuevo cliente</h4>
+<form action="/new-client" method="post">
+  <input type="text" name="name" placeholder="Enrique">
+  <input type="text" name="surname" placeholder="Estilos">
+  <button type="submit">Registrar cliente</button>
+</form>
+
+{{! <table>
+    <tr>
+        <th>Name</th>
+        <th>Color</th>
+        {{! <th>Price</th> 
+    </tr>
+
+    
+    {{#products
+        <tr>
+            <td>{{productName</td>
+            <td>{{productColor</td>
+            {{! <td>{{price</td> 
+        </tr>
+    {{/products
+</table> }}
+
+{{! <ul>
+  {{#products
+    <li>{{productName, {{productColor</li> he quitado las llaves finales de todas las variables
+  {{/products
+</ul> }}
+
+{{! <ul>
+  {{#clients
+    <li>{{name, {{surname</li> aquí también
+  {{/clients
+</ul> }}
